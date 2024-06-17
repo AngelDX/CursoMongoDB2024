@@ -1,0 +1,10 @@
+use("storedb")
+
+db.products.insertOne({
+  name: 'Polera Manga larga',
+  sizes: ['S','M','L','XL'],
+  category: {
+    name: 'POLERAS',
+    url: 'url'
+  }
+})

@@ -1,0 +1,22 @@
+use("storedb")
+
+db.users.insertOne({
+  firstname: 'Juan',
+  lastname: 'Perez',
+  email: 'juan34@gmail.com',
+  password: '3434234344',
+  role: 'customer',
+  age: 20,
+  isSingle: true,
+  socials: ['facebook','instagram'],
+  address: {
+    street: 'Jr. collas S/n',
+    city: 'Juliaca',
+    zip: '21001'
+  },
+  shipping:{
+    street: 'Jr. Huancane 12345',
+    city: 'Juliaca',
+    zip: '21001'
+  }
+})

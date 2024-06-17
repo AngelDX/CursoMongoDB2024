@@ -1,0 +1,11 @@
+use("storedb")
+
+db.users.insertOne({
+  firstname: 'Juan',
+  lastname: 'Perez',
+  email: 'juan34@gmail.com',
+  password: '12345678',
+  role: 'customer',
+  age: 20,
+  isSingle: true
+})

@@ -1,0 +1,32 @@
+ //Consultas agregadas devuelver la orden y el usuario
+ use("storedb")
+ db.orders.aggregate([
+  {
+    $lookup: {
+      from: 'users',
+      localField: 'user_id',
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+ ])
+
+
+ //Si solo quiero de una sola orden
+ use("storedb")
+ db.orders.aggregate([
+  {
+    $match:{
+      _id: ObjectId('667057697d66605f6bc825b9')
+    }
+  },
+  {
+    $lookup: {
+      from: 'users',
+      localField: 'user_id',
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+ ])
+ //Obtener la información de users y sus órdenes de compra

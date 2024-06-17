@@ -1,0 +1,13 @@
+use("storedb")
+db.users.find()
+
+use("storedb")
+db.getCollectionInfos();
+
+use("storedb")
+db.orders.find()
+
+use("storedb")
+db.users.find({_id:ObjectId('667055a8538256487173f443')})
+use("storedb")
+db.orders.find({user_id:ObjectId('667055a8538256487173f443')})
